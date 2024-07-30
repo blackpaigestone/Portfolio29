@@ -1,0 +1,72 @@
+Parameters for top-headlines Endpoint
+country: Filters the headlines to a specific country. For example, 'us' for the United States, 'gb' for Great Britain.
+
+Example: params['country'] = 'us'
+category: Filters headlines based on the news category. Options include:
+
+'business'
+'entertainment'
+'general'
+'health'
+'science'
+'sports'
+'technology'
+Example: params['category'] = 'business'
+q: Keywords or phrases to search for in the headlines.
+
+Example: params['q'] = 'technology'
+sources: Comma-separated list of identifiers for the sources you want to include in the results.
+
+Example: params['sources'] = 'bbc-news,cnn'
+pageSize: The number of results to return per page (max is 100).
+
+Example: params['pageSize'] = 10
+page: The page number to retrieve.
+
+Example: params['page'] = 1
+Parameters for everything Endpoint
+q: Keywords or phrases to search for in all articles.
+
+Example: params['q'] = 'technology'
+sources: Comma-separated list of identifiers for the sources you want to include in the results.
+
+Example: params['sources'] = 'bbc-news,cnn'
+domains: Comma-separated list of domains to limit the search to specific websites.
+
+Example: params['domains'] = 'bbc.com,cnn.com'
+excludeDomains: Comma-separated list of domains to exclude from the search.
+
+Example: params['excludeDomains'] = 'example.com'
+from: The start date for the search in YYYY-MM-DD format.
+
+Example: params['from'] = '2024-01-01'
+to: The end date for the search in YYYY-MM-DD format.
+
+Example: params['to'] = '2024-01-31'
+language: The language of the articles. Options include:
+
+'ar' (Arabic)
+'de' (German)
+'en' (English)
+'es' (Spanish)
+'fr' (French)
+'he' (Hebrew)
+'it' (Italian)
+'nl' (Dutch)
+'no' (Norwegian)
+'pt' (Portuguese)
+'ru' (Russian)
+'se' (Swedish)
+Example: params['language'] = 'en'
+sortBy: The order in which to sort the articles. Options include:
+
+'relevancy'
+'popularity'
+'publishedAt'
+Example: params['sortBy'] = 'publishedAt'
+pageSize: The number of results to return per page (max is 100).
+
+Example: params['pageSize'] = 10
+page: The page number to retrieve.
+
+Example: params['page'] = 1
