@@ -415,3 +415,6 @@ __pycache__/
 
 #working csv files
 working/**/*.csv
+
+*.csv
+*.jpg
