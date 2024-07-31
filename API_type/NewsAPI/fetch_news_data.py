@@ -12,7 +12,8 @@ categories = ['business', 'entertainment', 'general', 'health', 'science', 'spor
 keywords = ['AI', 'technology', 'health']
 
 
-load_dotenv(dotenv_path='/Users/paigeblackstone/Desktop/Portfolio29/Portfolio29/.env')
+env_path = '/Users/paigeblackstone/Desktop/Portfolio29/Portfolio29/env/newsapi.env'
+load_dotenv(env_path)
 
 BASE_URL = 'https://newsapi.org/v2/'
 
@@ -27,7 +28,7 @@ def get_custom_headlines(country, category, keyword):
         'category': category,
         'q': keyword,
         'pageSize': 10,
-        'apiKey': API_KEY
+        'apiKey': NEWS_API_KEY
     }
    
     response = requests.get(url, params=params)
