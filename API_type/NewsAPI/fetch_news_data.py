@@ -6,19 +6,15 @@ from dotenv import load_dotenv
 from itertools import product
 from datetime import datetime
 
-
-countries = ['us', 'gb', 'fr', 'de', 'it', 'es', 'au', 'ca', 'jp', 'cn']
-categories = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
-keywords = ['AI', 'technology', 'health']
-
-
 env_path = '/Users/paigeblackstone/Desktop/Portfolio29/Portfolio29/env/newsapi.env'
 load_dotenv(env_path)
 
+NEWS_API_KEY = os.getenv('NEWS_API_KEY')
+
 BASE_URL = 'https://newsapi.org/v2/'
 
-countries = ['us', 'gb', 'fr', 'de', 'it', 'es', 'au', 'ca', 'jp', 'cn']
-categories = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
+countries = ['us', 'de', 'au', 'ca', 'jp', 'cn']
+categories = ['business', 'entertainment', 'general', 'technology']
 keywords = ['AI', 'technology', 'health', 'economy', 'business','philosophy', 'culture']
 
 def get_custom_headlines(country, category, keyword):
@@ -30,7 +26,7 @@ def get_custom_headlines(country, category, keyword):
         'pageSize': 10,
         'apiKey': NEWS_API_KEY
     }
-   
+    
     response = requests.get(url, params=params)
     
     if response.status_code == 200:
