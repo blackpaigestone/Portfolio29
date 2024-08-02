@@ -418,3 +418,5 @@ working/**/*.csv
 
 *.csv
 *.jpg
+*.json
+*.xlsx
