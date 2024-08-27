@@ -420,3 +420,7 @@ working/**/*.csv
 *.jpg
 *.json
 *.xlsx
+*.parquet
+*.pdf
+*.zip
+*.env
