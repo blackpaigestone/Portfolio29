@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <title>Office of the Clerk, U.S. House of Representatives</title>
+
+    <script type="text/javascript" nonce="B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8">
+        window.NREUM || (NREUM = {}), __nr_require = function (t, n, e) { function r(e) { if (!n[e]) { var o = n[e] = { exports: {} }; t[e][0].call(o.exports, function (n) { var o = t[e][1][n]; return r(o || n) }, o, o.exports) } return n[e].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < e.length; o++)r(e[o]); return r }({ 1: [function (t, n, e) { function r(t) { try { s.console && console.log(t) } catch (n) { } } var o, i = t("ee"), a = t(16), s = {}; try { o = localStorage.getItem("__nr_flags").split(","), console && "function" == typeof console.log && (s.console = !0, o.indexOf("dev") !== -1 && (s.dev = !0), o.indexOf("nr_dev") !== -1 && (s.nrDev = !0)) } catch (c) { } s.nrDev && i.on("internal-error", function (t) { r(t.stack) }), s.dev && i.on("fn-err", function (t, n, e) { r(e.stack) }), s.dev && (r("NR AGENT IN DEVELOPMENT MODE"), r("flags: " + a(s, function (t, n) { return t }).join(", "))) }, {}], 2: [function (t, n, e) { function r(t, n, e, r, s) { try { p ? p -= 1 : o(s || new UncaughtException(t, n, e), !0) } catch (f) { try { i("ierr", [f, c.now(), !0]) } catch (d) { } } return "function" == typeof u && u.apply(this, a(arguments)) } function UncaughtException(t, n, e) { this.message = t || "Uncaught error with no additional information", this.sourceURL = n, this.line = e } function o(t, n) { var e = n ? null : c.now(); i("err", [t, e]) } var i = t("handle"), a = t(17), s = t("ee"), c = t("loader"), f = t("gos"), u = window.onerror, d = !1, l = "nr@seenError", p = 0; c.features.err = !0, t(1), window.onerror = r; try { throw new Error } catch (h) { "stack" in h && (t(8), t(7), "addEventListener" in window && t(5), c.xhrWrappable && t(9), d = !0) } s.on("fn-start", function (t, n, e) { d && (p += 1) }), s.on("fn-err", function (t, n, e) { d && !e[l] && (f(e, l, function () { return !0 }), this.thrown = !0, o(e)) }), s.on("fn-end", function () { d && !this.thrown && p > 0 && (p -= 1) }), s.on("internal-error", function (t) { i("ierr", [t, c.now(), !0]) }) }, {}], 3: [function (t, n, e) { t("loader").features.ins = !0 }, {}], 4: [function (t, n, e) { function r(t) { } if (window.performance && window.performance.timing && window.performance.getEntriesByType) { var o = t("ee"), i = t("handle"), a = t(8), s = t(7), c = "learResourceTimings", f = "addEventListener", u = "resourcetimingbufferfull", d = "bstResource", l = "resource", p = "-start", h = "-end", m = "fn" + p, v = "fn" + h, w = "bstTimer", y = "pushState", g = t("loader"); g.features.stn = !0, t(6); var b = NREUM.o.EV; o.on(m, function (t, n) { var e = t[0]; e instanceof b && (this.bstStart = g.now()) }), o.on(v, function (t, n) { var e = t[0]; e instanceof b && i("bst", [e, n, this.bstStart, g.now()]) }), a.on(m, function (t, n, e) { this.bstStart = g.now(), this.bstType = e }), a.on(v, function (t, n) { i(w, [n, this.bstStart, g.now(), this.bstType]) }), s.on(m, function () { this.bstStart = g.now() }), s.on(v, function (t, n) { i(w, [n, this.bstStart, g.now(), "requestAnimationFrame"]) }), o.on(y + p, function (t) { this.time = g.now(), this.startPath = location.pathname + location.hash }), o.on(y + h, function (t) { i("bstHist", [location.pathname + location.hash, this.startPath, this.time]) }), f in window.performance && (window.performance["c" + c] ? window.performance[f](u, function (t) { i(d, [window.performance.getEntriesByType(l)]), window.performance["c" + c]() }, !1) : window.performance[f]("webkit" + u, function (t) { i(d, [window.performance.getEntriesByType(l)]), window.performance["webkitC" + c]() }, !1)), document[f]("scroll", r, { passive: !0 }), document[f]("keypress", r, !1), document[f]("click", r, !1) } }, {}], 5: [function (t, n, e) { function r(t) { for (var n = t; n && !n.hasOwnProperty(u);)n = Object.getPrototypeOf(n); n && o(n) } function o(t) { s.inPlace(t, [u, d], "-", i) } function i(t, n) { return t[1] } var a = t("ee").get("events"), s = t(19)(a, !0), c = t("gos"), f = XMLHttpRequest, u = "addEventListener", d = "removeEventListener"; n.exports = a, "getPrototypeOf" in Object ? (r(document), r(window), r(f.prototype)) : f.prototype.hasOwnProperty(u) && (o(window), o(f.prototype)), a.on(u + "-start", function (t, n) { var e = t[1], r = c(e, "nr@wrapped", function () { function t() { if ("function" == typeof e.handleEvent) return e.handleEvent.apply(e, arguments) } var n = { object: t, "function": e }[typeof e]; return n ? s(n, "fn-", null, n.name || "anonymous") : e }); this.wrapped = t[1] = r }), a.on(d + "-start", function (t) { t[1] = this.wrapped || t[1] }) }, {}], 6: [function (t, n, e) { var r = t("ee").get("history"), o = t(19)(r); n.exports = r, o.inPlace(window.history, ["pushState", "replaceState"], "-") }, {}], 7: [function (t, n, e) { var r = t("ee").get("raf"), o = t(19)(r), i = "equestAnimationFrame"; n.exports = r, o.inPlace(window, ["r" + i, "mozR" + i, "webkitR" + i, "msR" + i], "raf-"), r.on("raf-start", function (t) { t[0] = o(t[0], "fn-") }) }, {}], 8: [function (t, n, e) { function r(t, n, e) { t[0] = a(t[0], "fn-", null, e) } function o(t, n, e) { this.method = e, this.timerDuration = isNaN(t[1]) ? 0 : +t[1], t[0] = a(t[0], "fn-", this, e) } var i = t("ee").get("timer"), a = t(19)(i), s = "setTimeout", c = "setInterval", f = "clearTimeout", u = "-start", d = "-"; n.exports = i, a.inPlace(window, [s, "setImmediate"], s + d), a.inPlace(window, [c], c + d), a.inPlace(window, [f, "clearImmediate"], f + d), i.on(c + u, r), i.on(s + u, o) }, {}], 9: [function (t, n, e) { function r(t, n) { d.inPlace(n, ["onreadystatechange"], "fn-", s) } function o() { var t = this, n = u.context(t); t.readyState > 3 && !n.resolved && (n.resolved = !0, u.emit("xhr-resolved", [], t)), d.inPlace(t, y, "fn-", s) } function i(t) { g.push(t), h && (x ? x.then(a) : v ? v(a) : (E = -E, O.data = E)) } function a() { for (var t = 0; t < g.length; t++)r([], g[t]); g.length && (g = []) } function s(t, n) { return n } function c(t, n) { for (var e in t) n[e] = t[e]; return n } t(5); var f = t("ee"), u = f.get("xhr"), d = t(19)(u), l = NREUM.o, p = l.XHR, h = l.MO, m = l.PR, v = l.SI, w = "readystatechange", y = ["onload", "onerror", "onabort", "onloadstart", "onloadend", "onprogress", "ontimeout"], g = []; n.exports = u; var b = window.XMLHttpRequest = function (t) { var n = new p(t); try { u.emit("new-xhr", [n], n), n.addEventListener(w, o, !1) } catch (e) { try { u.emit("internal-error", [e]) } catch (r) { } } return n }; if (c(p, b), b.prototype = p.prototype, d.inPlace(b.prototype, ["open", "send"], "-xhr-", s), u.on("send-xhr-start", function (t, n) { r(t, n), i(n) }), u.on("open-xhr-start", r), h) { var x = m && m.resolve(); if (!v && !m) { var E = 1, O = document.createTextNode(E); new h(a).observe(O, { characterData: !0 }) } } else f.on("fn-end", function (t) { t[0] && t[0].type === w || a() }) }, {}], 10: [function (t, n, e) { function r(t) { var n = this.params, e = this.metrics; if (!this.ended) { this.ended = !0; for (var r = 0; r < d; r++)t.removeEventListener(u[r], this.listener, !1); if (!n.aborted) { if (e.duration = a.now() - this.startTime, 4 === t.readyState) { n.status = t.status; var i = o(t, this.lastSize); if (i && (e.rxSize = i), this.sameOrigin) { var c = t.getResponseHeader("X-NewRelic-App-Data"); c && (n.cat = c.split(", ").pop()) } } else n.status = 0; e.cbTime = this.cbTime, f.emit("xhr-done", [t], t), s("xhr", [n, e, this.startTime]) } } } function o(t, n) { var e = t.responseType; if ("json" === e && null !== n) return n; var r = "arraybuffer" === e || "blob" === e || "json" === e ? t.response : t.responseText; return h(r) } function i(t, n) { var e = c(n), r = t.params; r.host = e.hostname + ":" + e.port, r.pathname = e.pathname, t.sameOrigin = e.sameOrigin } var a = t("loader"); if (a.xhrWrappable) { var s = t("handle"), c = t(11), f = t("ee"), u = ["load", "error", "abort", "timeout"], d = u.length, l = t("id"), p = t(14), h = t(13), m = window.XMLHttpRequest; a.features.xhr = !0, t(9), f.on("new-xhr", function (t) { var n = this; n.totalCbs = 0, n.called = 0, n.cbTime = 0, n.end = r, n.ended = !1, n.xhrGuids = {}, n.lastSize = null, p && (p > 34 || p < 10) || window.opera || t.addEventListener("progress", function (t) { n.lastSize = t.loaded }, !1) }), f.on("open-xhr-start", function (t) { this.params = { method: t[0] }, i(this, t[1]), this.metrics = {} }), f.on("open-xhr-end", function (t, n) { "loader_config" in NREUM && "xpid" in NREUM.loader_config && this.sameOrigin && n.setRequestHeader("X-NewRelic-ID", NREUM.loader_config.xpid) }), f.on("send-xhr-start", function (t, n) { var e = this.metrics, r = t[0], o = this; if (e && r) { var i = h(r); i && (e.txSize = i) } this.startTime = a.now(), this.listener = function (t) { try { "abort" === t.type && (o.params.aborted = !0), ("load" !== t.type || o.called === o.totalCbs && (o.onloadCalled || "function" != typeof n.onload)) && o.end(n) } catch (e) { try { f.emit("internal-error", [e]) } catch (r) { } } }; for (var s = 0; s < d; s++)n.addEventListener(u[s], this.listener, !1) }), f.on("xhr-cb-time", function (t, n, e) { this.cbTime += t, n ? this.onloadCalled = !0 : this.called += 1, this.called !== this.totalCbs || !this.onloadCalled && "function" == typeof e.onload || this.end(e) }), f.on("xhr-load-added", function (t, n) { var e = "" + l(t) + !!n; this.xhrGuids && !this.xhrGuids[e] && (this.xhrGuids[e] = !0, this.totalCbs += 1) }), f.on("xhr-load-removed", function (t, n) { var e = "" + l(t) + !!n; this.xhrGuids && this.xhrGuids[e] && (delete this.xhrGuids[e], this.totalCbs -= 1) }), f.on("addEventListener-end", function (t, n) { n instanceof m && "load" === t[0] && f.emit("xhr-load-added", [t[1], t[2]], n) }), f.on("removeEventListener-end", function (t, n) { n instanceof m && "load" === t[0] && f.emit("xhr-load-removed", [t[1], t[2]], n) }), f.on("fn-start", function (t, n, e) { n instanceof m && ("onload" === e && (this.onload = !0), ("load" === (t[0] && t[0].type) || this.onload) && (this.xhrCbStart = a.now())) }), f.on("fn-end", function (t, n) { this.xhrCbStart && f.emit("xhr-cb-time", [a.now() - this.xhrCbStart, this.onload, n], n) }) } }, {}], 11: [function (t, n, e) { n.exports = function (t) { var n = document.createElement("a"), e = window.location, r = {}; n.href = t, r.port = n.port; var o = n.href.split("://"); !r.port && o[1] && (r.port = o[1].split("/")[0].split("@").pop().split(":")[1]), r.port && "0" !== r.port || (r.port = "https" === o[0] ? "443" : "80"), r.hostname = n.hostname || e.hostname, r.pathname = n.pathname, r.protocol = o[0], "/" !== r.pathname.charAt(0) && (r.pathname = "/" + r.pathname); var i = !n.protocol || ":" === n.protocol || n.protocol === e.protocol, a = n.hostname === document.domain && n.port === e.port; return r.sameOrigin = i && (!n.hostname || a), r } }, {}], 12: [function (t, n, e) { function r() { } function o(t, n, e) { return function () { return i(t, [f.now()].concat(s(arguments)), n ? null : this, e), n ? void 0 : this } } var i = t("handle"), a = t(16), s = t(17), c = t("ee").get("tracer"), f = t("loader"), u = NREUM; "undefined" == typeof window.newrelic && (newrelic = u); var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", p = l + "ixn-"; a(d, function (t, n) { u[n] = o(l + n, !0, "api") }), u.addPageAction = o(l + "addPageAction", !0), u.setCurrentRouteName = o(l + "routeName", !0), n.exports = newrelic, u.interaction = function () { return (new r).get() }; var h = r.prototype = { createTracer: function (t, n) { var e = {}, r = this, o = "function" == typeof n; return i(p + "tracer", [f.now(), t, e], r), function () { if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], e), o) try { return n.apply(this, arguments) } catch (t) { throw c.emit("fn-err", [arguments, this, t], e), t } finally { c.emit("fn-end", [f.now()], e) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, n) { h[n] = o(p + n) }), newrelic.noticeError = function (t, n) { "string" == typeof t && (t = new Error(t)), i("err", [t, f.now(), !1, n]) } }, {}], 13: [function (t, n, e) { n.exports = function (t) { if ("string" == typeof t && t.length) return t.length; if ("object" == typeof t) { if ("undefined" != typeof ArrayBuffer && t instanceof ArrayBuffer && t.byteLength) return t.byteLength; if ("undefined" != typeof Blob && t instanceof Blob && t.size) return t.size; if (!("undefined" != typeof FormData && t instanceof FormData)) try { return JSON.stringify(t).length } catch (n) { return } } } }, {}], 14: [function (t, n, e) { var r = 0, o = navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/); o && (r = +o[1]), n.exports = r }, {}], 15: [function (t, n, e) { function r(t, n) { if (!o) return !1; if (t !== o) return !1; if (!n) return !0; if (!i) return !1; for (var e = i.split("."), r = n.split("."), a = 0; a < r.length; a++)if (r[a] !== e[a]) return !1; return !0 } var o = null, i = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var s = navigator.userAgent, c = s.match(a); c && s.indexOf("Chrome") === -1 && s.indexOf("Chromium") === -1 && (o = "Safari", i = c[1]) } n.exports = { agent: o, version: i, match: r } }, {}], 16: [function (t, n, e) { function r(t, n) { var e = [], r = "", i = 0; for (r in t) o.call(t, r) && (e[i] = n(r, t[r]), i += 1); return e } var o = Object.prototype.hasOwnProperty; n.exports = r }, {}], 17: [function (t, n, e) { function r(t, n, e) { n || (n = 0), "undefined" == typeof e && (e = t ? t.length : 0); for (var r = -1, o = e - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = t[n + r]; return i } n.exports = r }, {}], 18: [function (t, n, e) { n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], 19: [function (t, n, e) { function r(t) { return !(t && t instanceof Function && t.apply && !t[a]) } var o = t("ee"), i = t(17), a = "nr@original", s = Object.prototype.hasOwnProperty, c = !1; n.exports = function (t, n) { function e(t, n, e, o) { function nrWrapper() { var r, a, s, c; try { a = this, r = i(arguments), s = "function" == typeof e ? e(r, a) : e || {} } catch (f) { l([f, "", [r, a, o], s]) } u(n + "start", [r, a, o], s); try { return c = t.apply(a, r) } catch (d) { throw u(n + "err", [r, a, d], s), d } finally { u(n + "end", [r, a, c], s) } } return r(t) ? t : (n || (n = ""), nrWrapper[a] = t, d(t, nrWrapper), nrWrapper) } function f(t, n, o, i) { o || (o = ""); var a, s, c, f = "-" === o.charAt(0); for (c = 0; c < n.length; c++)s = n[c], a = t[s], r(a) || (t[s] = e(a, f ? s + o : o, i, s)) } function u(e, r, o) { if (!c || n) { var i = c; c = !0; try { t.emit(e, r, o, n) } catch (a) { l([a, e, r, o]) } c = i } } function d(t, n) { if (Object.defineProperty && Object.keys) try { var e = Object.keys(t); return e.forEach(function (e) { Object.defineProperty(n, e, { get: function () { return t[e] }, set: function (n) { return t[e] = n, n } }) }), n } catch (r) { l([r]) } for (var o in t) s.call(t, o) && (n[o] = t[o]); return n } function l(n) { try { t.emit("internal-error", n) } catch (e) { } } return t || (t = o), e.inPlace = f, e.flag = a, e } }, {}], ee: [function (t, n, e) { function r() { } function o(t) { function n(t) { return t && t instanceof r ? t : t ? c(t, s, i) : i() } function e(e, r, o, i) { if (!l.aborted || i) { t && t(e, r, o); for (var a = n(o), s = m(e), c = s.length, f = 0; f < c; f++)s[f].apply(a, r); var d = u[g[e]]; return d && d.push([b, e, r, a]), a } } function p(t, n) { y[t] = m(t).concat(n) } function h(t, n) { var e = y[t]; if (e) for (var r = 0; r < e.length; r++)e[r] === n && e.splice(r, 1) } function m(t) { return y[t] || [] } function v(t) { return d[t] = d[t] || o(e) } function w(t, n) { f(t, function (t, e) { n = n || "feature", g[e] = n, n in u || (u[n] = []) }) } var y = {}, g = {}, b = { on: p, addEventListener: p, removeEventListener: h, emit: e, get: v, listeners: m, context: n, buffer: w, abort: a, aborted: !1 }; return b } function i() { return new r } function a() { (u.api || u.feature) && (l.aborted = !0, u = l.backlog = {}) } var s = "nr@context", c = t("gos"), f = t(16), u = {}, d = {}, l = n.exports = o(); l.backlog = u }, {}], gos: [function (t, n, e) { function r(t, n, e) { if (o.call(t, n)) return t[n]; var r = e(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, n, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return t[n] = r, r } var o = Object.prototype.hasOwnProperty; n.exports = r }, {}], handle: [function (t, n, e) { function r(t, n, e, r) { o.buffer([t], r), o.emit(t, n, e) } var o = t("ee").get("handle"); n.exports = r, r.ee = o }, {}], id: [function (t, n, e) { function r(t) { var n = typeof t; return !t || "object" !== n && "function" !== n ? -1 : t === window ? 0 : a(t, i, function () { return o++ }) } var o = 1, i = "nr@id", a = t("gos"); n.exports = r }, {}], loader: [function (t, n, e) { function r() { if (!E++) { var t = x.info = NREUM.info, n = p.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && n)) return u.abort(); f(g, function (n, e) { t[n] || (t[n] = e) }), c("mark", ["onload", a() + x.offset], null, "api"); var e = p.createElement("script"); e.src = "https://" + t.agent, n.parentNode.insertBefore(e, n) } } function o() { "complete" === p.readyState && i() } function i() { c("mark", ["domContent", a() + x.offset], null, "api") } function a() { return O.exists && performance.now ? Math.round(performance.now()) : (s = Math.max((new Date).getTime(), s)) - x.offset } var s = (new Date).getTime(), c = t("handle"), f = t(16), u = t("ee"), d = t(15), l = window, p = l.document, h = "addEventListener", m = "attachEvent", v = l.XMLHttpRequest, w = v && v.prototype; NREUM.o = { ST: setTimeout, SI: l.setImmediate, CT: clearTimeout, XHR: v, REQ: l.Request, EV: l.Event, PR: l.Promise, MO: l.MutationObserver }; var y = "" + location, g = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1118.min.js" }, b = v && w && w[h] && !/CriOS/.test(navigator.userAgent), x = n.exports = { offset: s, now: a, origin: y, features: {}, xhrWrappable: b, userAgent: d }; t(12), p[h] ? (p[h]("DOMContentLoaded", i, !1), l[h]("load", r, !1)) : (p[m]("onreadystatechange", o), l[m]("onload", r)), c("mark", ["firstbyte", s], null, "api"); var E = 0, O = t(18) }, {}] }, {}, ["loader", 2, 10, 4, 3]);
+        ; NREUM.info = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", licenseKey: "9993044f26", applicationID: "444046004", sa: 1 }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FFR6GSYFC"></script>
+    <script type="text/javascript" nonce="B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3FFR6GSYFC');
+    </script>
+
+    <link rel="stylesheet" href="/assets/css/site.min.css" />
+
+    <script type="text/javascript" nonce="B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8">(function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)</script>
+    <script src="/scripts/main.min.js" nonce="B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8"></script>
+
+    
+
+</head>
+<body id="homepage" class="in-session">
+    <div class="survey survey--hidden">
+        <a href="https://www.surveymonkey.com/r/Clerk_site" target="_blank" rel="noreferrer" title="Feedback">
+            <div class="survey__tab">Feedback</div>
+        </a>
+    </div>
+    
+<header id="header" class="navbar-fixed-top">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 hidden-xs logo">
+        <a href="https://clerk.house.gov" rel="noreferrer">
+          <img src="/assets/img/clerk-logo-web.svg" title="Office of the Clerk, U.S. House of Representatives" alt="Office of the Clerk, U.S. House of Representatives" />
+        </a>
+      </div>
+      <div class="hidden-xs col-sm-6 hidden-print">
+          <div class="header-search-grp">
+              <ul class="inline-list" style="padding-right: 5px">
+                  <li><a href="https://clerk.house.gov/Members#FindRepresentative" class="partial-view-link" title="Find Your Representative">Find Your Representative</a></li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-container"></div>
+
+  
+<nav id="main-navbar" class="navbar navbar-static" role="navigation" arial-label="Main Menu">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <div class="logo visible-xs">
+                    <a href="https://clerk.house.gov" rel="noreferrer" title="Office of the Clerk, U.S. House of Representatives">
+                        <img src="/assets/img/clerk-logo-web.svg" title="Office of the Clerk, U.S. House of Representatives" alt="Office of the Clerk, U.S. House of Representatives" />
+                    </a>
+                </div>
+                <button class="navbar-toggle" type="button" data-target=".bs-js-navbar-collapse" id="ui-collapse-485" data-toggle="collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">&nbsp;</span>
+                    <span class="icon-bar">&nbsp;</span>
+                    <span class="icon-bar">&nbsp;</span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse bs-js-navbar-collapse col-md-12 col-lg-12">
+                <ul id="blue-nav" class="nav navbar-nav lcs-nav" role="menubar">
+                    <li class="hidden-xs hidden-sm nav-prepend">
+                        <svg role="img" aria-label="Yellow Star" xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="8.5 -3.9 19 17.8">
+                            <polygon points="27.5 3 20.3 3 18.1 -3.9 15.8 3 8.5 3 14.4 7.1 12.2 13.9 18 9.7 23.9 13.9 21.7 7.1 " fill="#FFD262" />
+                        </svg>
+                    </li>
+                    <li class="search-mobile hidden-sm hidden-md hidden-lg">
+                        <form action="#" method="post" class="search-mobile_form">
+                            <div class="lcs-search hidden">
+                                <label class="sr-only" for="clerk-search-mobile">Search Office of the Clerk</label>
+                                <input type="text" name="clerk-search-mobile" id="clerk-search-mobile" value="" tabindex="0" autocomplete="off" placeholder="Search Office of the Clerk">
+                            </div>
+                        </form>
+                    </li>
+                    <li class="dropdown">
+                        <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Legislative Information</a>
+                        <div id="legis-info" class="dropdown-menu has-datapicker" aria-labelledby="drop1">
+                            <div class="dropdown-menu_left">
+                                <ul role="menu" aria-label="legislative information">
+                                    <li>
+                                       <h3 class="menu-title">Legislative Information</h3>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/FloorSummary#FloorProceedings" title="Legislative Activity" rel="noreferrer">Legislative Activity</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/Votes" title="Votes" rel="noreferrer">Roll Call Votes</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/DischargePetition" title="Discharge Petitions" rel="noreferrer">Discharge Petitions</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://live.house.gov" title="live.house.gov" target="_blank" rel="noreferrer">live.house.gov</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/SelectedMemorial" title="Selected Memorials" rel="noreferrer">Selected Memorials</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/ConsensusCalendarMotions" title="Consensus Calendar Motions">Consensus Calendar Motions</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul class="list-unstyled equal-height-list" role="list" aria-label="House Floor Proceedings">
+                                 <li role="listitem">
+                                    <h3 class="menu-subtitle">House Floor Proceedings</h3>
+                                 </li>
+                                 <li>
+                                    <div id="datepicker"></div>
+                                 </li>
+                                 <li>
+                                    <a class="btn btn-small btn-yellow btn-houselive" tabindex="0" href="https://live.house.gov" title="live.house.gov" target="_blank" rel="noreferrer">Watch live.house.gov</a>
+                                 </li>
+                              </ul>
+                            </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul class="list-unstyled equal-height-list" role="list" aria-label="Additional Resources">
+                                    <li>
+                                        <h3 class="menu-subtitle">Additional Resources</h3>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a tabindex="0" href="https://clerk.house.gov/member_info/electionInfo/2022/statistics2022.pdf" title="Statistics of the 2018 Congressional Election" target="_blank" rel="noreferrer">Statistics of the 2022 Congressional Election</a></span>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a tabindex="0" href="https://www.govinfo.gov/link/crec/type/ddresumeongoing?link-type=pdf" title="Résumé of Congressional Activity" target="_blank" rel="noreferrer">Résumé of Congressional Activity</a></span>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="https://www.congress.gov/search" title="Legislative Search" target="_blank" rel="noreferrer">Legislative Search</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="https://www.congress.gov/congressional-record" title="Congressional Record" target="_blank" rel="noreferrer">Congressional Record</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="http://www.senate.gov/index.htm" title="U.S. Senate" target="_blank" rel="noreferrer">U.S. Senate</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="https://www.majorityleader.gov/schedule/weekly-schedule.htm" title="House Schedule" target="_blank" rel="noreferrer">House Schedule</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="http://docs.house.gov/floor" title="Bills This Week" target="_blank" rel="noreferrer">Bills This Week</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a id="drop2" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Member Information</a>
+                        <div id="member-info" class="dropdown-menu mega-menu" aria-labelledby="drop2">
+                           <div class="dropdown-menu_left">
+                                <ul role="menu" aria-label="member information">
+                                    <li>
+                                        <h3 class="menu-title">Member Information</h3>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0" href="https://clerk.house.gov/Members#MemberProfiles" title="Member Profiles" rel="noreferrer">Member Profiles</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0"  href="https://clerk.house.gov/Members#Leadership" title="Leadership" rel="noreferrer">Leadership</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0" href="https://clerk.house.gov/Members#ElectionInformation" title="Election Information" target="_blank" rel="noreferrer">Election Information</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0"  href="https://clerk.house.gov/Members#Vacancies" title="Vacancies" rel="noreferrer">Current Vacancies</a>
+									  </li>
+                                  <li role="menuitem">
+                                        <a tabindex="0" class="partial-view-link" href="https://clerk.house.gov/Members#Demographics" title="Vacancies" target="_self">Demographics</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0" class="partial-view-link" href="https://clerk.house.gov/Members#MemberOaths" title="Vacancies" target="_self">Member Oaths</a>
+                                    </li>
+                              </ul>
+                                    <ul class="list-unstyled equal-height-list" style="max-width: 230px">
+                                       <li>
+                                          <div id="menu-member-stats" class="member-stats_chart">
+                                             <dl id="chart-nav">
+                                                <dt>Republicans<span>220</span></dt>
+                                                <dd><span id="data-two-nav" style="width:51%;">218</span></dd>
+                                                <dt>Democrats<span>213</span></dt>
+                                                <dd><span id="data-one-nav" style="width:49%;">213</span></dd>
+                                                <dt>Independents<span>0</span></dt>
+                                                <dd><span id="data-three-nav" style="width:0%;">0</span></dd>
+                                                <dt>Vacancies<span>2</span></dt>
+                                                <dd><span id="data-four-nav" style="width:1%;">4</span></dd>
+                                             </dl>
+                                          </div>
+                                       </li>
+                                    </ul>
+                           </div>
+                           <div class="mega-bucket dropdown-menu_right">
+                              <ul role="list" aria-label="majority leadership" class="list-unstyled equal-height-list" style="line-height: 1.2;">
+                                       <li>
+                                          <h3 class="menu-subtitle">Republican Leadership</h3>
+                                       </li>
+                                             <li role="listitem" style="max-width: 290px">
+                                                <b>Rep. Mike Johnson</b><br>
+                                                <a href="https://www.speaker.gov" title="Speaker of the House" aria-label="representative Rep. Mike Johnson, Speaker of the House" target="_blank" rel="noreferrer">Speaker of the House</a>
+
+                                             </li>
+                                             <li role="listitem" style="max-width: 290px">
+                                                <b>Rep. Steve Scalise</b><br>
+                                                <a href="https://majorityleader.gov" title="Majority Leader" aria-label="representative Rep. Steve Scalise, Majority Leader" target="_blank" rel="noreferrer">Majority Leader</a>
+
+                                             </li>
+                                             <li role="listitem" style="max-width: 290px">
+                                                <b>Rep. Tom Emmer</b><br>
+                                                <a href="https://www.majoritywhip.gov" title="Majority Whip" aria-label="representative Rep. Tom Emmer, Majority Whip" target="_blank" rel="noreferrer">Majority Whip</a>
+
+                                             </li>
+                                             <li role="listitem" style="max-width: 290px">
+                                                <b>Rep. Elise M. Stefanik</b><br>
+                                                <a href="http://www.gop.gov" title="Republican Conference Chair" aria-label="representative Rep. Elise M. Stefanik, Republican Conference Chair" target="_blank" rel="noreferrer">Republican Conference Chair</a>
+
+                                             </li>
+                                             <li role="listitem" style="max-width: 290px">
+                                                <b>Rep. Gary J. Palmer</b><br>
+                                                <a href="https://republicanpolicy.house.gov/" title="Republican Policy Committee Chair" aria-label="representative Rep. Gary J. Palmer, Republican Policy Committee Chair" target="_blank" rel="noreferrer">Republican Policy Committee Chair</a>
+
+                                             </li>
+                              </ul>
+                           </div>
+                           <div class="mega-bucket dropdown-menu_right">
+                              <ul role="list" aria-label="republican leadership" class="list-unstyled equal-height-list" style="line-height: 1.2;">
+
+                                       <li>
+                                          <h3 class="menu-subtitle">Democratic Leadership</h3>
+                                       </li>
+                                             <li role="listitem" style="max-width: 220px">
+                                                <b>Rep. Hakeem S. Jeffries</b><br>
+                                                <a href="https://democraticleader.house.gov/" title="Democratic Leader (Minority Leader)" aria-label="representative Rep. Hakeem S. Jeffries, Democratic Leader (Minority Leader)" target="_blank" rel="noreferrer">Democratic Leader (Minority Leader)</a>
+
+                                             </li>
+                                             <li role="listitem" style="max-width: 220px">
+                                                <b>Rep. Katherine M. Clark</b><br>
+                                                <a href="https://democraticwhip.house.gov/" title="Minority Whip" aria-label="representative Rep. Katherine M. Clark, Minority Whip" target="_blank" rel="noreferrer">Minority Whip</a>
+
+                                             </li>
+                                             <li role="listitem" style="max-width: 220px">
+                                                <b>Rep. Pete Aguilar</b><br>
+                                                <a href="https://www.dems.gov/" title="Democratic Caucus Chair" aria-label="representative Rep. Pete Aguilar, Democratic Caucus Chair" target="_blank" rel="noreferrer">Democratic Caucus Chair</a>
+
+                                             </li>
+                                             <li role="listitem" style="max-width: 220px">
+                                                <b>Rep. Ted Lieu</b><br>
+                                                <a href="https://dpcc.house.gov/" title="Democratic Caucus Vice Chair" aria-label="representative Rep. Ted Lieu, Democratic Caucus Vice Chair" target="_blank" rel="noreferrer">Democratic Caucus Vice Chair</a>
+
+                                             </li>
+                              </ul>
+                           </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul role="list" aria-label="additional resources" class="list-unstyled equal-height-list" style="line-height:1.2;">
+                                    <li>
+                                        <h3 class="menu-subtitle">Additional Resources</h3>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a href="https://clerk.house.gov/Members#FindRepresentative" title="Find Your Representative">Find Your Representative</a>
+                                    </li>
+                                    <li role="listitem" style="white-space:nowrap;">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a href="https://clerk.house.gov/member_info/olm-118.pdf" title="Official List of Members by State" target="_blank" rel="noreferrer">Official List of Members by State</a></span>
+                                        <br />
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a href="https://clerk.house.gov/member_info/TTD-118.pdf" title="Official Member Telephone Directory" target="_blank" rel="noreferrer">Official Member Telephone Directory</a></span>
+                                        <br />
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a href="https://clerk.house.gov/member_info/duplicate-names-118.pdf" title="Duplicate and Similar Names of Members" target="_blank" rel="noreferrer">Duplicate and Similar Names of Members</a></span>
+                                        <br />
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a href="https://clerk.house.gov/member_info/Terms_of_Service.pdf" title="Terms of Service" target="_blank" rel="noreferrer">Terms of Service</a></span>
+                                        <br />
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0">Mailing Labels</span><br />
+                                        [<a href="https://clerk.house.gov/Members/WordMailingLabel" title="Mailing Labels" target="_blank" rel="noreferrer">MS Word</a> | <a tabindex="-1" href="https://clerk.house.gov/Members/TextMailingLabel" title="Mailing Labels" target="_blank" rel="noreferrer">Text File</a>]
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0">Member Data</span><br />
+                                        [<a href="https://clerk.house.gov/Members/ExcelMemberData" title="Member Data" target="_blank" rel="noreferrer">Excel</a> | <a href="https://clerk.house.gov/xml/lists/MemberData.xml" title="Member Data" target="_blank" rel="noreferrer">XML</a> | <a tabindex="-1" href="https://clerk.house.gov/member_info/MemberData_UserGuide.pdf" title="Official Lists" target="_blank" rel="noreferrer">User Guide</a>]
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a href="https://www.congress.gov/members" title="Members on Congress.gov" target="_blank" rel="noreferrer">Members on Congress.gov</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a href="http://bioguide.congress.gov/biosearch/biosearch.asp" title="Bioguide" target="_blank" rel="noreferrer">Biographical Directory</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a id="drop3" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Committee Information</a>
+                        <div id="committee-info" class="dropdown-menu mega-menu" aria-labelledby="drop3">
+                           <div class="dropdown-menu_left">
+                              <h3 class="menu-title">Committee Information</h3>
+                              <div class="dropdown-menu_left">
+                                 <ul role="menu" class="library-list_ul" aria-label="committee profiles">
+                                    <li class="no-bullet" style="white-space: nowrap !important">
+                                       <a href="https://clerk.house.gov/committees" title="Committee Profiles" rel="noreferrer">COMMITTEE PROFILES</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/AG00" tit title="Committee on Agriculture" rel="noreferrer">Agriculture</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/AP00" tit title="Committee on Appropriations" rel="noreferrer">Appropriations</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/AS00" tit title="Committee on Armed Services" rel="noreferrer">Armed Services</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/BU00" tit title="Committee on the Budget" rel="noreferrer">Budget</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/ED00" tit title="Committee on Education and the Workforce" rel="noreferrer">Education and the Workforce</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/IF00" tit title="Committee on Energy and Commerce" rel="noreferrer">Energy and Commerce</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/SO00" title="Committee on Ethics" rel="noreferrer">Ethics</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="dropdown-menu_left">
+                                 <ul role="menu" class="library-list_ul">
+                                    <li role="listitem" class="list-spacer">&nbsp;</li> 
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/BA00" title="Committee on Financial Services" rel="noreferrer">Financial Services</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/FA00" title="Committee on Foreign Affairs" rel="noreferrer">Foreign Affairs</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/HM00" title="Committee on Homeland Security" rel="noreferrer">Homeland Security</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/HA00" title="Committee on House Administration" rel="noreferrer">House Administration</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/JU00" title="Committee on the Judiciary" rel="noreferrer">Judiciary</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/II00" title="Committee on Natural Resources" rel="noreferrer">Natural Resources</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/GO00" title="Committee on Oversight and Government Reform" rel="noreferrer">Oversight and Accountability</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="dropdown-menu_left">
+                                 <ul role="menu" class="library-list_ul">
+                                    <li role="menuitem" class="list-spacer">&nbsp;</li> 
+
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/RU00" title="Committee on Rules" rel="noreferrer">Rules</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/SY00" title="Committee on Science, Space, and Technology" rel="noreferrer">Science, Space, and Technology</a>
+                                    </li>
+                                    <li>
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/SM00" title="Committee on Small Business" rel="noreferrer">Small Business</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/PW00" title="Committee on Transportation and Infrastructure" rel="noreferrer">Transportation and Infrastructure</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/VR00" title="Committee on Veterans' Affairs" rel="noreferrer">Veterans' Affairs</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/WM00" title="Committee on Ways and Means" rel="noreferrer">Ways and Means</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="dropdown-menu_left">
+                                 <ul role="menu" class="library-list_ul">
+                                    <li role="menuitem" class="list-spacer">&nbsp;</li> 
+
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/IG00" title="Committee on Select Intelligence" rel="noreferrer">Select Intelligence</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/ZS00" title="Committee on Select Strategic Competition" rel="noreferrer">Select Strategic Competition</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/EC00" title="Joint Economic Committee" rel="noreferrer">Joint Economic</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/JL00" title="Joint Committee on the Library" rel="noreferrer">Joint Library</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/JP00" title="Joint Committee on Printing" rel="noreferrer">Joint Printing</a>
+                                    </li>
+                                    <li role="menuitem">
+                                       <a tabindex="0" href="https://clerk.house.gov/committees/IT00" title="Joint Committee on Taxation" rel="noreferrer">Joint Taxation</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul class="list-unstyled equal-height-list" role="list" aria-label="additional resources">
+                                    <li>
+                                        <h3 class="menu-subtitle">Additional Resources</h3>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a tabindex="0" href="https://clerk.house.gov/committee_info/oal.pdf" title="Official List of Members with Committee Assignments" target="_blank" rel="noreferrer">Official List of Members with Committee Assignments</a></span>
+                                        <br />
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0"><a tabindex="0" href="https://clerk.house.gov/committee_info/scsoal.pdf" title="Official List of Standing Committees and Subcommittees" target="_blank" rel="noreferrer">Official List of Standing Committees and Subcommittees</a></span>
+                                        <br />
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="http://docs.house.gov/Committee" title="Committee Repository" target="_blank" rel="noreferrer">Committee Repository</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="http://www.gpo.gov/fdsys/browse/collection.action?collectionCode=CRPT" title="Committee Reports" target="_blank" rel="noreferrer">Committee Reports</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="https://www.congress.gov/committees" title="Committees on Congress.gov" target="_blank" rel="noreferrer">Committees on Congress.gov</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a id="drop4" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Disclosures</a>
+                        <div id="disclosures-info" class="dropdown-menu menu-right" aria-labelledby="drop4">
+                            <div class="dropdown-menu_left">
+                                <h3 class="menu-title">Disclosures</h3>
+                                <div class="dropdown-menu_left">
+                                    <ul role="menu" class="library-list_ul" aria-label="disclosures">
+                                        <li class="no-bullet" style="white-space: nowrap !important">
+                                            <a href="/" title="Public Disclosure">PUBLIC DISCLOSURE</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a tabindex="0" href="/FinancialDisclosure" title="Financial Disclosures">Financial Disclosure Reports</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a tabindex="0" href="/ForeignTravel" title="Foreign Travel Reports and Expenditures">Foreign Travel Reports and Expenditures</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a tabindex="0" href="/FrankedMaterials" title="Unsolicited Mass Communications">Unsolicited Mass Communications</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a tabindex="0" href="/GiftTravelFilings" title="Gift Travel Filings">Gift Travel Filings</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-menu_left">
+                                    <ul role="menu" class="library-list_ul">
+                                        <li role="listitem" class="list-spacer">&nbsp;</li>
+                                        <li role="menuitem">
+                                            <a tabindex="0" href="/LegalExpenseFund" title="Legal Expense Fund Disclosures">Legal Expense Fund Disclosures</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a tabindex="0" href="/OfficeOfCongressionalEthics" title="Office of Congressional Ethics">Office of Congressional Ethics</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a tabindex="0" href="/PostEmploymentNotification" title="Post-Employment Notifications">Post-Employment Notifications</a>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul class="list-unstyled equal-height-list" role="list" aria-label="additional resources">
+                                    <li>
+                                        <h3 class="menu-subtitle">Additional Resources</h3>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="http://lobbyingdisclosure.house.gov" title="Lobbying Disclosures" target="_blank" rel="noreferrer">Lobbying Disclosures</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a href="https://www.congress.gov/public-laws" title="Public Laws" target="_blank" rel="noreferrer">Public Laws</a>
+                                    </li>
+                                    <li role="listitem">
+                                        <i class="fa fa-angle-double-right"></i>&nbsp;<a tabindex="0" href="http://lobbyingdisclosure.house.gov/amended_lda_guide.html" title="Lobbying Disclosure Act" target="_blank" rel="noreferrer">Lobbying Disclosure Act</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="drop5" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">About the Clerk</a>
+                        <div id="about-clerk-info" class="dropdown-menu menu-right mega-menu" aria-labelledby="drop5">
+                            <div class="dropdown-menu_left">
+                                <ul role="menuitem" aria-label="about the clerk">
+                                    <li>
+                                        <h3 class="menu-title">About the Clerk</h3>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0" class="partial-view-link" href="https://clerk.house.gov/About#OverviewContact" title="The Clerk of the House" target="_self">Overview & Contact</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0" class="partial-view-link" href="https://clerk.house.gov/About#DutyOfClerk" title="Duties of the Clerk" target="_self">Duties of the Clerk</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0" class="partial-view-link" href="https://clerk.house.gov/About#OfficeService" title="Offices and Services" target="_self">Offices and Services</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a tabindex="0" class="partial-view-link" href="https://clerk.house.gov/About#HistoryOfOffice" title="History of the Office" target="_self">History of the Office</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul class="list-unstyled equal-height-list" role="list" tabindex="0" aria-label="the clerk of the house">
+                                    <li><h3 class="menu-subtitle">The Clerk of the House</h3></li>
+                                    <li role="listitem" tabindex="0" aria-label="the honorable Kevin F. McCumber, clerk of the u s house of representatives">
+                                       <b>The Honorable Kevin F. McCumber</b><br>
+                                       <i>Acting Clerk of the U.S. House of Representatives</i><br>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul class="list-unstyled equal-height-list" role="list" tabindex="0" aria-label="deputy clerks">
+                                    <li><h3 class="menu-subtitle">Deputy Clerk</h3></li>
+                                     <li role="listitem" tabindex="0" aria-label="Lisa Grant, deputy clerk">
+                                       <b>Lisa Grant</b><br>
+                                       <i>Deputy Clerk</i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mega-bucket dropdown-menu_right">
+                                <ul class="list-unstyled equal-height-list" role="list" tabindex="0" aria-label="contact information">
+                                    <li>
+                                       <h3 class="menu-subtitle">Contact Information</h3>
+                                    </li>
+                                    <li role="listitem" tabindex="0" aria-label="mailing address, u s capitol, room h154, washington, d c 20515 6601">
+                                       <b>Mailing Address</b>
+                                       <br />
+                                       U.S. Capitol
+                                       <br />
+                                       Room H154
+                                       <br />
+                                       Washington, DC 20515&ndash;6601
+                                    </li>
+                                    <li role="listitem" tabindex="0" aria-label="telephone number, (202) 225-7000">
+                                       <b>Telephone Number</b>
+                                       <br />
+                                       (202) 225&ndash;7000
+                                    </li>
+                                    <li role="listitem" tabindex="0" aria-label="office hours, 9:00 a m to 6:00 p m, monday to friday">
+                                       <b>Office Hours</b>
+                                       <br />
+                                       9:00 AM&ndash;6:00 PM, Monday&ndash;Friday
+                                    </li>
+                                </ul>
+                            </div>
+							<div class="mega-bucket dropdown-menu_right">
+                              <ul class="list-unstyled equal-height-list" role="list" aria-label="additional resources">
+                                 <li>
+                                    <h3 class="menu-subtitle">Additional Resources</h3>
+                                 </li>
+                                 <li role="listitem">
+                                    <i class="fa fa-angle-double-right"></i>&nbsp;<span tabindex="0">Artificial Intelligence Use Case Inventory</span><br />
+                                    [<a href="https://clerk.house.gov/reference-files/Artificial-Intelligence-Use-Case-Inventory.pdf" title="Member Data" target="_blank" rel="noreferrer">USHouse-Clerk-1: Comparative Print Suite </a>]
+                                 </li>
+                                
+                              </ul>
+                           </div>	 
+                        </div>
+                    </li>
+                    <li class="hidden-xs hidden-sm nav-append">
+                        <svg role="img" aria-label="Yellow Star" xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="8.5 -3.9 19 17.8">
+                            <polygon points="27.5 3 20.3 3 18.1 -3.9 15.8 3 8.5 3 14.4 7.1 12.2 13.9 18 9.7 23.9 13.9 21.7 7.1 " fill="#FFD262" />
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+ 
+
+</header>
+    
+
+<div class="jumbotron not_in_session">
+    <div class="container">
+        <div id="feature">
+            <div class="col-xs-12">
+                <p><span class="session-id hidden-xs"></span></p>
+                <h1>
+                    <span class="date" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);">
+                        Requested resource not found. Please try again.
+                    </span>
+                </h1>
+                <span class="date" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);">August 6, 2024 1:13:34 PM</span>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="footer_wrapper">
+    <footer id="footer" class="container">
+        <div class="row footer-links">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <div class="vcard">
+                    <h3 class="library-h3 fn" tabindex="0" aria-label="U.S. Capitol">U.S. Capitol</h3>
+                    <p class="adr" tabindex="0" aria-label="room h154, washington, dc, 20515 6601">
+                        <span class="street-address">Room H154</span><br>
+                        <span class="region">Washington, DC</span><br>
+                        <span class="postal-code">20515-6601</span><br>
+                    </p>
+                    <p class="tel"><a href="tel:(202)225-7000" aria-label="telephone: (202) 225 7000">p: (202) 225-7000</a></p>
+                </div>
+                <dl>
+                    <dt>For general inquires:</dt>
+                    <dd>
+                        <a href="mailto:info.clerkweb@mail.house.gov" title="" aria-label="for general inquires, info.clerkweb@mail.house.gov">info.clerkweb@mail.house.gov</a>
+                    </dd>
+                    <dt>For general technical support:</dt>
+                    <dd>
+                        <a href="mailto:clerkweb@mail.house.gov" title="" aria-label="for general technical support, clerkweb@mail.house.gov">clerkweb@mail.house.gov</a>
+                    </dd>
+                    <dt>For HouseLive support:</dt>
+                    <dd>
+                        <a href="mailto:houselive@mail.house.gov" title="" aria-label="for houselive support, houselive@mail.house.gov">houselive@mail.house.gov</a>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <h3 class="library-h3" tabindex="0" aria-label="Legislative Information">Legislative Information</h3>
+                <a href="https://clerk.house.gov/FloorSummary#FloorProceedings" title="Legislative Activity" rel="noreferrer">Legislative Activity</a>
+                <a href="https://clerk.house.gov/Votes" title="Votes" rel="noreferrer">Roll Call Votes</a>
+                <a href="https://clerk.house.gov/DischargePetition" title="Discharge Petitions" rel="noreferrer">Discharge Petitions</a>
+                <a href="https://live.house.gov" title="HouseLive 2.0" rel="noreferrer">HouseLive 2.0</a>
+                <a href="http://houselive.gov" title="Video Archives" rel="noreferrer">Video Archives</a>
+                <a href="https://clerk.house.gov/SelectedMemorial" title="Selected Memorials" rel="noreferrer">Selected Memorials</a>
+                <a href="https://clerk.house.gov/proxyletter" title="Proxy Letters">Proxy Letters</a>
+                <h3 class="library-h3" tabindex="0" aria-label="Member Information">Member Information</h3>
+                <a href="https://clerk.house.gov/Members#MemberProfiles" title="Member Profiles" rel="noreferrer">Member Profiles</a>
+                <a  href="https://clerk.house.gov/Members#Leadership" title="Leadership" rel="noreferrer">Leadership</a>
+                <a href="http://history.house.gov/Institution/Election-Statistics/Election-Statistics/" title="Election Information" target="_blank" rel="noreferrer">Election Information</a>
+                <a  href="https://clerk.house.gov/Members#Vacancies" title="Current Vacancies" rel="noreferrer">Current Vacancies</a>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <h3 class="library-h3" tabindex="0" aria-label="Disclosures">Disclosures</h3>
+                <a href="/FinancialDisclosure" title="Financial Disclosure Reports">Financial Disclosure Reports</a>
+                <a href="/ForeignTravel" title="Foreign Travel Reports and Expenditures">Foreign Travel Reports and Expenditures</a>
+                <a href="/FrankedMaterials" title="Franked Materials (Mass Mailings)">Franked Materials (Mass Mailings)</a>
+                <a href="/GiftTravelFilings" title="Gift Travel Filings">Gift Travel Filings</a>
+                <a href="/LegalExpenseFund" title="Legal Expense Fund Disclosures">Legal Expense Fund Disclosures</a>
+                <a href="/OfficeOfCongressionalEthics" title="Office of Congressional Ethics">Office of Congressional Ethics</a>
+                <a href="/PostEmploymentNotification" title="Post-Employment Notifications">Post-Employment Notifications</a>
+                <h3 class="library-h3" tabindex="0" aria-label="About the Clerk">About the Clerk</h3>
+                <a  href="https://clerk.house.gov/About#OverviewContact" rel="noreferrer" title="The Clerk of the House">Overview & Contact</a>
+                <a  href="https://clerk.house.gov/About#DutyOfClerk" rel="noreferrer" title="Duties of the Clerk">Duties of the Clerk</a>
+                <a  href="https://clerk.house.gov/About#OfficeService" rel="noreferrer" title="Offices and Services">Offices and Services</a>
+                <a  href="https://clerk.house.gov/About#HistoryOfOffice" rel="noreferrer" title="History of the Office">History of the Office</a>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <h3 class="library-h3" tabindex="0" aria-label="Committee Information">Committee Information</h3>
+                <a href="https://clerk.house.gov/committees" title="Committee Profiles" rel="noreferrer">Committee Profiles</a>
+                <h3 class="library-h3" tabindex="0" aria-label="Clerk Sites">Clerk Sites</h3>
+                <a href="http://docs.house.gov/floor" title="Bills This Week" target="_blank" rel="noreferrer">Bills This Week</a>
+                <a href="http://bioguide.congress.gov/biosearch/biosearch.asp" title="Bioguide" target="_blank" rel="noreferrer">Biographical Directory</a>
+                <a href="http://kids.clerk.house.gov" title="Clerk Kids" target="_blank" rel="noreferrer">Clerk Kids</a>
+                <a href="http://docs.house.gov/committee" title="Committee Repository" target="_blank" rel="noreferrer">Committee Repository</a>
+                <a href="http://history.house.gov" title="History" target="_blank" rel="noreferrer">History, Art & Archives</a>
+                <h3 class="library-h3" tabindex="0" aria-label="Help and Resources">Help & Resources</h3>
+                <a href="/PrivacyPolicy" title="Privacy Policy">Privacy Policy</a>
+                <a href="https://clerk.house.gov" title="Site Map">Site Map</a>
+                <a href="///clerk.house.gov/legislative/legfaq.aspx" title="FAQs" target="_blank" rel="noreferrer">FAQs</a>
+            </div>
+        </div>
+
+        <div class="row footer-social">
+            <div class="col-sm-12 col-md-8 col-lg-6 footer-social_logo">
+                <a href="https://clerk.house.gov" title="Office of the Clerk, U.S. House of Representatives" rel="noreferrer">
+                    <img src="/assets/img/clerk-logo-footer.svg" title="Office of the Clerk, U.S. House of Representatives" alt="Office of the Clerk, U.S. House of Representatives" />
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+    <div id='scrollUp'>
+        <i class='fa fa-chevron-up'></i>
+    </div>
+</body>
+</html>
